@@ -38,7 +38,7 @@ To get a local copy of the project up and running, follow these steps.
 
 1. Clone the repository to your local machine:
    ```sh
-   git clone https://github.com/your-username/your-repo.git
+   git clone https://github.com/muhammadnaeemtahir/movie-search-app.git
    ```
 2. Navigate to the project directory:
    ```sh
