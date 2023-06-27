@@ -1,6 +1,29 @@
 # Movies App
 
+## Learnings
+
+During the development of this project, the following concepts were learned and implemented:
+
+- Setting up a basic React application.
+- Using React functional components and hooks (useState, useEffect).
+- Making asynchronous API requests using fetch and async/await.
+- Handling form submission and input change events.
+- Conditional rendering of components based on data availability.
+- Reusing components to display dynamic content.
+- Styling components using CSS and Bootstrap classes.
+
+This project serves as a good starting point for learning React and building simple applications that interact with external APIs.
+
+## Features
+
+- Search movies by title using the input field.
+- Display search results as movie cards.
+- Show movie title, release year, and type on each movie card.
+- Handle empty search queries and display a corresponding message.
+
 This website search movies from IMDB and show thier poster, title, year and type (movie, series etc.).
+
+See live demo at [https://filmsatimdb.netlify.app/](https://filmsatimdb.netlify.app/)
 
 ## Prerequisites
 

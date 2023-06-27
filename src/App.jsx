@@ -6,7 +6,7 @@ import MovieCard from "./components/MovieCard";
 import "./App.css";
 
 const API_KEY = `56696df9`;
-const API_URL = `http://www.omdbapi.com/?apikey=${API_KEY}`;
+const API_URL = `https://www.omdbapi.com/?apikey=${API_KEY}`;
 
 const App = () => {
   const [movies, setMovies] = useState([]);
@@ -18,26 +18,22 @@ const App = () => {
 
     setMovies(data.Search);
   };
-  useEffect(() => {
-    searchMovies("Superman");
-  }, []);
-
   return (
     <>
-      <Navbar />
+      <Navbar name="Movies" />
       <div className="container">
         <section className="py-sm-5 py-3">
           <form action="#" method="post" onSubmit={(e) => e.preventDefault()}>
-            <div class="input-group">
+            <div className="input-group">
               <input
                 type="search"
                 value={searchMovie}
-                class="form-control"
+                className="form-control"
                 placeholder="Search"
                 onChange={(e) => setSearchMovie(e.target.value)}
               />
               <button
-                class="btn btn-warning"
+                className="btn btn-warning"
                 type="button"
                 onClick={() => {
                   if (searchMovie.trim() !== "") {
@@ -47,16 +43,16 @@ const App = () => {
                   }
                 }}
               >
-                <i class="fa-brands fa-searchengin fs-3"></i>
+                <i className="fa-brands fa-searchengin fs-3"></i>
               </button>
             </div>
           </form>
         </section>
         <div className="row pb-sm-5 pb-3">
           {movies.length > 0 ? (
-            movies.map((movie) => (
+            movies.map((movie, index) => (
               <>
-                <div className="col-sm-3">
+                <div className="col-sm-3" key={index}>
                   <MovieCard Movie={movie} />
                 </div>
               </>
